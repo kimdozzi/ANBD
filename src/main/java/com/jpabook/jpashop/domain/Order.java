@@ -21,11 +21,12 @@ public class Order {
 
     @OneToMany(mappedBy = "order")
     private List<OrderItem> orderItems = new ArrayList<>();
-
+    @OneToOne
+    @JoinColumn(name = "delivery_id")
     private Delivery delivery;
 
     // 날짜관련 어노테이션 매핑해야함 -> java8 LocalDateTime 쓰면 hibernate가 자동 지원
     private LocalDateTime orderDate;
-
+    @Enumerated(EnumType.STRING)
     private OrderStatus status; // 주문상태 [ORDER, CANCEL]
 }
