@@ -25,7 +25,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-
+	// javax validation NotEmpty 사용하기
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	// 쿼리 파라미터 로그 남기는 방법
 	implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.5.6'
 
