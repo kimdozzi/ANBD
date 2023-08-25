@@ -20,7 +20,8 @@ public class ItemService {
         itemRepository.save(item);
     }
 
-    @Transactional
+
+    @Transactional // 리팩토링 할 것.
     public void updateItem(Long itemId, Book param) {
         Item findItem = itemRepository.findOne(itemId);
         findItem.setPrice(param.getPrice());
