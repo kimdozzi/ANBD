@@ -10,6 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
+import java.util.stream.Collectors;
 
 // @Controller @ResponseBody
 @RestController // 데이터 자체를 바로 json이나 xml로 보내자.
@@ -27,6 +29,36 @@ public class MemberApiController {
      * API를 만들 때는 엔티티를 파라미터로 받지 마라.
      * 엔티티를 외부에 노출해선 안된다.
      * */
+
+    @GetMapping("/api/v1/members") // ver 1. 안좋은 버전 -> 외부에 모든 엔티티가 노출된다.
+    public List<Member> membersV1() {
+        return memberService.findMembers();
+    }
+
+    // API 응답 스펙에 맞추어 별도의 DTO를 반환하자 !
+    @GetMapping("/api/v2/members")
+    public Result memberV2() {
+        List<Member> findMembers = memberService.findMembers();
+        List<MemberDTO> collect = findMembers.stream()
+                .map(m -> new MemberDTO(m.getId(), m.getName(), m.getAddress()))
+                .collect(Collectors.toList());
+        return new Result(collect.size(), collect);
+    }
+
+    @Data
+    @AllArgsConstructor
+    static class Result<T> {
+        private int count;
+        private T data;
+    }
+    @Data
+    @AllArgsConstructor
+    static class MemberDTO {
+        private Long id;
+        private String name;
+        private Address address;
+    }
+
 
     @PostMapping("/api/v1/members")
     public CreateMemberResponse saveMemberV1(@RequestBody @Valid Member member) {
