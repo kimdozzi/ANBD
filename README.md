@@ -1,6 +1,49 @@
-# jpa-shop
-JPA를 활용한 쇼핑몰 웹 사이트 
+# [JPA를 활용한 쇼핑몰 서비스]
 
+1. 진행기간: 2023-08-11 ~ 진행 중
+
+<br>
+<br>
+
+2. 주요내용
+- ..
+
+
+3. 사용한 Skill
+```
+    - Java, SpringBoot, Spring MVC, JPA, lombok
+    - h2 database
+```
+
+<br>
+<br>
+
+
+4. 본인이 기여한점
+- ..
+
+
+<br>
+<br>
+
+5. 어려웠던점
+- ..
+
+<br>
+<br>
+
+6. 해결 과정
+- ..
+   
+<br>
+<br>
+
+7. 결과
+- ..
+
+
+<br>
+<br>
 
 [개선할 내용]
 1. hierarchical-style layouts (계층 스타일 레이아웃) → 리팩토링 해보기
