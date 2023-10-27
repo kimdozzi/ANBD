@@ -1,17 +1,23 @@
 # [쇼핑몰 서비스]
 
-1. 진행기간: 2023-08 ~ 2023-10
+프로젝트 소개
+- 스프링부트와 JPA를 활용한 자바 웹 애플리케이션 개발
+- 
 
 <br>
 <br>
 
-2. 주요내용
-- ..
+
+개발기간 2023-08 ~ 2023-10
 
 
-3. 사용한 Skill
+<br>
+<br>
+
+
+기술 스택
 ```
-    - Java, SpringBoot, Spring MVC, JPA, lombok
+    - Java, SpringBoot, Spring MVC, JPA, lombok, querydsl
     - h2 database
 ```
 
@@ -19,31 +25,41 @@
 <br>
 
 
-4. 본인이 기여한점
+담당한 역할
 - ..
 
 
 <br>
 <br>
 
-5. 어려웠던점
+
+주요 업무
 - ..
 
 <br>
 <br>
 
-6. 해결 과정
+
+아키텍쳐
 - ..
    
 <br>
 <br>
 
-7. 결과
-- ..
+
+어려웠던 점
 
 
 <br>
 <br>
+
+
+노력 또는 해결한 점
+
+
+<br>
+<br>
+
 
 [개선할 내용]
 1. hierarchical-style layouts (계층 스타일 레이아웃) → 리팩토링 해보기
